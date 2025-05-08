@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher or Lower</title>
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  </head>
+  <body>
+    <header class="landing-page">
+      <section class="outline">
+        <div class="intro">
+          <h1>Hoger Lager</h1>
+          <p>
+            De speler ziet een nummer. Dan klikt hij op de hoger of lager knop
+            🔽 om het resultaat van het volgende nummer te voorspellen. Indien
+            het fout ❌ is verliest hij een leven. Hoe lang houdt hij het vol?
+          </p>
+          <a class="btn" href="../index.html">Home</a>
+        </div>
+        <div class="landing-image-wrapper">
+          <a href="../higherLower/index.html" class="badge"
+            >Ga naar resultaat! 🎮</a
+          >
+          <img
+            class="landing-image"
+            src="../assets/images/image.png"
+            alt="screenshot van het spel"
+          />
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="steps-overview">
+        <h2>Stap voor Stap overzicht</h2>
+        <div class="steps-table">
+          <a href="#intro-html" class="step-link">📃HTML Structuur</a>
+          <a href="#htmlstep1" class="step-link">📃 HTML Stap 1</a>
+          <a href="#htmlstep2" class="step-link">📃 HTML Stap 2</a>
+          <a href="#htmlstep3" class="step-link">📃 HTML Stap 3</a>
+          <a href="#intro-css" class="step-link">🎨CSS Styling</a>
+          <a href="#cssstep1" class="step-link">🎨 CSS Stap 1</a>
+          <a href="#cssstep2" class="step-link">🎨 CSS Stap 2</a>
+          <a href="#cssstep3" class="step-link">🎨 CSS Stap 3</a>
+          <a href="#cssstep4" class="step-link">🎨 CSS Stap 4</a>
+          <a href="#intro-js" class="step-link">✴️ Javascript interactie</a>
+          <a href="#jsstep1" class="step-link">✴️ JS Stap 1</a>
+          <a href="#jsstep2" class="step-link">✴️ JS Stap 2</a>
+          <a href="#jsstep3" class="step-link">✴️ JS Stap 3</a>
+          <a href="#jsstep4" class="step-link">✴️ JS Stap 4</a>
+          <a href="#jsstep5" class="step-link">✴️ JS Stap 5</a>
+        </div>
+      </div>
+
+      <div class="steps-container">
+        <section class="section html-section">
+          <h2>HTML: De basis van de applicatie</h2>
+          <div class="step-card special-card" id="intro-html">
+            <img
+              src="../assets/images/teacher.png"
+              alt="developer illustratie"
+              class="step-illustration"
+            />
+            <h3>Structuur opzetten met HTML</h3>
+            <p>
+              HTML is het skelet van je website. Het bepaalt welke onderdelen er
+              zijn: titels, knopjes, tekst en plaatjes. Zonder HTML weet je
+              computer niet wat waar hoort. Denk eraan als het bouwplan van je
+              digitale huis! 🏗️
+            </p>
+          </div>
+          <div class="step-card" id="htmlstep1">
+            <h3>Stap 1 Maak je project en basis-HTML aan 🗂️</h3>
+            <p>
+              Begin met het maken van een nieuwe map op je computer,
+              bijvoorbeeld genaamd <code class="mark">hoger-lager</code>. Open
+              deze map in je code-editor (zoals Visual Studio Code).
+            </p>
+            <p>
+              Maak vervolgens een nieuw bestand aan met de naam
+              <code class="mark">index.html</code>. Typ een uitroepteken (<code
+                class="mark"
+                >!</code
+              >) en druk op <kbd class="mark">Tab</kbd> of
+              <kbd class="mark">Enter</kbd>. Dit genereert automatisch een basis
+              HTML-structuur.
+            </p>
+            <p>
+              Pas de titel aan naar <code class="mark">Hoger Lager</code> in de
+              <span class="mark">&lt;title&gt;</span> tag. We gaan ook nog een
+              link toevoegen naar een Google font. We gaan dit gebruiken om een
+              ander font toe te voegen aan een element. Plaats deze link onder
+              de title.
+            </p>
+            <div class="code-block">
+              <button class="copy-btn btn">Copy</button>
+              <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;title&gt;Hoger Lager&lt;/title&gt;
+&lt;link
+href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+rel="stylesheet"
+&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+            </div>
+          </div>
+          <div class="step-card" id="htmlstep2">
+            <h3>Stap 2 🧱 Voeg de structuur toe</h3>
+            <p>
+              In de <code class="mark">&lt;body&gt;</code> van je document gaan
+              we een container maken met daarin twee gedeeltes, een container
+              voor je levens en score en een container voor je getal en buttons.
+              Hiervoor gaan we divs gebruiken. Divs worden vaak gebruikt als een
+              groeperings element. We gaan deze containers ook al een classe
+              geven zodat we de containers later nog makkelijk kunnen stylen.
+            </p>
+            <p>
+              Je code in het <span class="mark">&lt;body&gt;</span>-gedeelte zou
+              er nu zo uit moeten zien:
+            </p>
+            <div class="code-block">
+              <button class="copy-btn btn">Copy</button>
+              <pre><code>
+&lt;div class="gameContainer"&gt;
+&lt;div class="statusBar"&gt;
+&lt;/div&gt;
+
+&lt;div class="gameArea"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+            </div>
+            <p>
+              Bewaar je bestand en open het in de browser om te zien of alles
+              correct verschijnt.
+            </p>
+          </div>
+          <div class="step-card" id="htmlstep3">
+            <h3>Stap 3 Voeg de visual elementen toe</h3>
+            <p>
+              De containers die we net gemaakt hebben zijn niet zichtbaar omdat
+              we er nog geen andere elementen in hebben toegevoegd. We gaan nu
+              een paar '<span class="mark">p</span>' tags en
+              <span class="mark">buttons</span> 🔳 toevoegen in de containers.
+            </p>
+            <div class="code-block">
+              <button class="copy-btn btn">Copy</button>
+              <pre><code>
+&lt;div class="gameContainer"&gt;
+&lt;div id="statusBar"&gt;
+&lt;div&gt;
+&lt;p&gt;Score:&lt;/p&gt;
+&lt;p class="score"&gt;0&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;                
+&lt;p&gt;Levens:&lt;/p&gt;
+&lt;p class="levens"&gt;3&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+  
+&lt;div id="gameArea"&gt;
+&lt;p class="gokCijfer"&gt;0&lt;/p&gt;
+&lt;button class="buttonHoger"&gt;Hoger&lt;/button&gt;
+&lt;button class="buttonLager"&gt;Lager&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            </div>
+            <p>
+              Nu hebben we visuele onderdelen in de pagina.👀 Ook hebben we elk
+              onderdeel een klasse gegeven voor styling die we nu gaan
+              behandelen.
+            </p>
+          </div>
+        </section>
+
+        <section class="section css-section">
+          <h2>CSS: We gaan onze pagina wat opfleuren!</h2>
+          <div class="step-card special-card" id="intro-css">
+            <img
+              src="../assets/images/programmer2.png"
+              alt="leerkracht illustratie"
+              class="step-illustration"
+            />
+            <h3>Het oog wil ook wat met CSS</h3>
+            <p>
+              CSS kleurt je website in. Lettertypes, knoppen, achtergronden en
+              animaties — dat is allemaal CSS. Het is de kleerkast van je
+              pagina: zonder ziet alles er kaal uit. Met CSS wordt je site écht
+              knap! 🎨👗
+            </p>
+          </div>
+
+          <div class="step-card" id="cssstep1">
+            <h3>Stap 1 Maak je css bestand aan</h3>
+            <p>
+              In dezelfde folder gaan we een nieuw bestand aanmaken met de naam
+              "main.css". 📃 Dit is het bestand waar we al onze css in gaan
+              zetten. We gaan dit bestand ook linken aan ons HTML - bestand. Dit
+              doen we door een "<span class="mark">link</span>" tag onderaan in
+              de head toe te voegen.
+            </p>
+            <div class="code-block">
+              <button class="copy-btn btn">Copy</button>
+              <pre>
+              <code>
+&lt;link rel="stylesheet" href="./main.css" &gt;
+              </code>
+            </pre>
+            </div>
+          </div>
+          <div class="step-card" id="cssstep2">
+            <h3>Stap 2 🖌️ Maak de basis styling aan</h3>
+            <p>
+              We gaan nu een paar basisstijlen toevoegen in de body en de
+              containers. Stijlen van containers gaat meestal over de positie en
+              kleuren van de containers
+            </p>
+            <div class="code-block">
+              <button class="copy-btn btn">Copy</button>
+              <pre>
+              <code>
+body {
+margin: 0;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+background: #f4f4f9;
+color: #333;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+                
+.gameContainer {
+background: white;
+border-radius: 0.5rem;
+box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+padding: 2rem;
+text-align: center;
+max-width: 400px;
+width: 90%;
+}
+                
+.statusBar {
+display: flex;
+justify-content: space-between;
+gap: 1rem;
+margin-bottom: 1.5rem;
+}
+
+.statusBar div {
+background-color: #f0f0f5;
+padding: 0.5rem 1rem;
+border-radius: 0.5rem;
+box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.statusBar p:first-child {
+margin-bottom: 0.25rem;
+font-weight: 500;
+}
+
+.statusBar p:last-child {
+font-size: 1.25rem;
+font-weight: bold;
+}
+              </code>
+            </pre>
+            </div>
+          </div>
+
+          <div class="step-card" id="cssstep3">
+            <h3>Stap 3 Maak de buttons en tekstjes mooi 🎨</h3>
+            <p>
+              Nu dat we de basis styling hebben, gaan we de buttons en tekstjes
+              nog wat opfleuren. Deze styling gaat meer over de typografie,
+              opmaak van de buttons en kleurtjes.
+            </p>
+            <div class="code-block">
+              <button class="copy-btn btn">Copy</button>
+              <pre>
+              <code>
+.gameContainer p {
+margin: 0.5rem;
+font-size: 1rem;
+}
+                
+.gokCijfer {
+font-size: 3rem;
+margin: 1rem 0;
+font-weight: bold;
+color: #4a4a4a;
+transition: transform 0.3s ease;
+font-family: 'Press Start 2P', cursive;
+}
+                
+button {
+padding: 12px 24px;
+border: none;
+border-radius: 12px;
+font-size: 1rem;
+cursor: pointer;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
+                
+.buttonLager {
+background: #e94e77;
+}
+
+.buttonHoger {
+background-color: #4a90e2;
+color: white;
+}
+
+.buttonLager {
+background-color: #e94e77;
+color: white;
+}
+              </code>
+            </pre>
+            </div>
+            <p>
+              Nu zou je een gestyled game-UI moeten te zien krijgen. Als je op
+              de buttons klikt zal er nog niets gebeuren. Maar dit gaan we nu
+              oplossen met JavaScript
+            </p>
+          </div>
+          <div class="step-card" id="cssstep4">
+            <h3>Stap 4 Toevoegen van een hover effect</h3>
+            <p>
+              We gaan nu nog een klein hover effect toevoegen om een beetje meer
+              flair aan onze buttons te geven. Een hover effect is een stukje
+              CSS dat alleen toegepast wordt als je over de button gaat met je
+              muis.
+            </p>
+            <div class="code-block">
+              <button class="copy-btn btn">Copy</button>
+              <pre>
+              <code>
+button:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+              </code>
+            </pre>
+            </div>
+          </div>
+        </section>
+        <section class="section js-section">
+          <h2>Javascript: De magie die onze app tot leven wekt!</h2>
+          <div class="step-card special-card" id="intro-js">
+            <img
+              src="../assets/images/programmer3.png"
+              alt="developer illustratie"
+              class="step-illustration"
+            />
+            <h3>Interactie met JavaScript</h3>
+            <p>
+              JavaScript is de tovenaar van je website. Daarmee maak je dingen
+              beweeglijk, interactief en slim. Klik je op een knop? JS laat iets
+              gebeuren! Het is de magie die alles tot leven wekt. ✨🧙‍♂️
+            </p>
+          </div>
+          <div>
+            <div class="step-card" id="jsstep1">
+              <h3>
+                Stap 1: Verzamel alle stukjes tekst die we nodig hebben om aan
+                te passen of aan te klikken.
+              </h3>
+              <p>
+                We gaan levens, een score 🎯en een random getal nodig hebben. Je
+                hebt hier al HTML voor voorzien dus we gaan deze oproepen via
+                hun id of klasse. Vergeet ook niet je script onderaan in de body
+                te linken. Anders zal je Javascript niet werken.
+              </p>
+              <div class="code-block">
+                <button class="copy-btn btn">Copy</button>
+                <pre>
+                <code>
+&lt;script src="./index.js"&gt&lt;/script>
+                </code>
+              </pre>
+                <pre><code> 
+let levens = document.querySelector(".levens");
+let score = document.querySelector(".score");
+let gokCijfer = document.querySelector(".gokCijfer");
+
+//klikbare elementen
+let btnHoger = document.querySelector(".buttonHoger");
+let btnLager = document.querySelector(".buttonLager");
+            </code></pre>
+              </div>
+            </div>
+            <div class="step-card" id="jsstep2">
+              <h3>Stap 2: Maak een functie aan ⚒️</h3>
+              <p>
+                Nu gaan we een <span class="mark">functie</span> maken waar we
+                een random getal in gaan aanmaken. We zetten dit in een functie
+                zodat we het nummer meermaals kunnen gebruiken zonder dat het
+                nummer hetzelfde blijft. We gaan ook nog een aantal levens
+                💌💌💌en de huidige score moeten bijhouden.We gaan hier gewoon
+                een cijfer voor bijhouden dat we kunnen toepassen of aanpassen.
+              </p>
+              <div class="code-block">
+                <button class="copy-btn btn">Copy</button>
+                <pre><code>
+// aantal levens en score instellen
+let aantalLevens = 3;
+let huidigeScore = 0;
+
+// functie om een nieuw getal te genereren
+function nieuwGetal() {
+  return Math.floor(Math.random() * 11);
+}
+            </code></pre>
+              </div>
+            </div>
+            <div class="step-card" id="jsstep3">
+              <h3>Stap 3 Zet de buttons aan het werk</h3>
+              <p>
+                We hebben tot nu toe de buttons al aangeroepen maar als je er op
+                klikt gebeurt er nog altijd niets. Dit komt doordat er geen
+                <span class="mark">"eventlistener"</span>
+                aan verbonden is.
+              </p>
+              <div class="code-block">
+                <button class="copy-btn btn">Copy</button>
+                <pre><code>
+//buttons een functie geven
+btnHoger.addEventListener("click", clickHoger);
+btnLager.addEventListener("click", clickLager);
+            </code></pre>
+              </div>
+            </div>
+            <div class="step-card" id="jsstep4">
+              <h3>Stap 4: ✍️ Schrijf condities</h3>
+              <p>
+                Nu onze <span class="mark">buttons</span> een functie hebben,
+                kunnen we elke functie uitschrijven. Deze 2 functies zullen
+                bijna exact het zelfde zijn behalve
+                <span class="mark">de conditie</span>. Een conditie is een
+                stukje code waarvan we gaan checken of het juist of fout is. Dit
+                gaan we doen met een "<span class="mark">if-else loop</span>".
+              </p>
+              <div class="code-block">
+                <button class="copy-btn btn">Copy</button>
+                <pre>
+              <code>
+//functies aanmaken voor als er op een knop gedrukt word
+function clickHoger() {
+  const nieuw = nieuwGetal();
+  if (nieuw > huidigGetal) {
+    huidigeScore++;
+    score.textContent = huidigeScore;
+  } else {
+    aantalLevens--;
+    levens.textContent = aantalLevens;
+  }
+  huidigGetal = nieuw;
+  gokCijfer.textContent = huidigGetal;
+  checkGameOver();
+}
+
+function clickLager() {
+  const nieuw = nieuwGetal();
+  if (nieuw < huidigGetal) {
+    huidigeScore++;
+    score.textContent = huidigeScore;
+  } else {
+    aantalLevens--;
+    levens.textContent = aantalLevens;
+  }
+  huidigGetal = nieuw;
+  gokCijfer.textContent = huidigGetal;
+  checkGameOver();
+}
+              </code>
+            </pre>
+              </div>
+            </div>
+            <div class="step-card" id="jsstep5">
+              <h3>Stap 5: Game over of niet?</h3>
+              <p>
+                In de laatste stap gaan we checken of het spel gedaan is. We
+                doen dit in beide functies op het einde. Hierin gaan we checken
+                of we nog genoeg levens hebben om verder te spelen 🎲🎲, zo niet
+                herstart het spel.
+              </p>
+              <div class="code-block">
+                <button class="copy-btn btn">Copy</button>
+                <pre>
+              <code>
+function checkGameOver() {
+  if (aantalLevens <= 0) {
+    alert("Game Over! Je score was: " + huidigeScore);
+    location.reload(); // spel herstarten
+  }
+}
+              </code>
+            </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
